@@ -1,7 +1,6 @@
-﻿define emrax = Character('Эмрах', color="#c8ffc8")
-define spaggetio = Character('Max', color="#000000")
-define baggio = Character(None, kind=nvl)
-
+﻿define emrax = Character("Эмрах", color="#c8ffc8", kind=nvl)
+define spaggetio = Character("Спаггетио", color="#ffee00")
+define baggio = Character("Баггио", color="#00ffff")
 
 label start:
     show spaggetio
@@ -12,7 +11,7 @@ label start:
     baggio "Ну... Когда столько неисправностей в коде, тут и не такое может случиться!"
     hide baggio
 
-    "А вы кто такие оба`?! И что вы сделали с моим ноутбуком?! Как мне теперь работать?!"
+    emrax "А вы кто такие оба?! И что вы сделали с моим ноутбуком?! Как мне теперь работать?!"
 
     show baggio
     baggio "Не переживай, юный падаван! Тебе не придётся покупать новый для работы! Достаточно будет помочь нам исправить код и твой ноутбук вернётся к прежнему состоянию!"
@@ -28,7 +27,7 @@ label start:
     baggio "А ты не переживай, запрыгивай!"
     hide baggio
 
-    "Куда?!"ё
+    "Куда?!"
 
     menu:
         "Вырваться из рук":
