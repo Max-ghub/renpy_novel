@@ -1,8 +1,23 @@
-define emrach = Character("Эмрах", color="#fff")
-define companyDirector = Character("Сергей Геннадьевич", color="#fff")
-define spaghettinio = Character("Спагеттиньо", color="#fff")
-define bagio = Character("Баггио", color="#fff")
-define numbertaurus = Character("Цифротаурус", color="#fff")
-define aught = Character("Нечто", color="#fff")
-define security = Character("Охраник", color="#fff")
-define vetrorosa = Character("Система безопасности мояка \"Ветророза\"", color="#fff")
+# emrach
+define em = Character("Эмрах", color="#fff")
+
+# companyDirector
+define co = Character("Сергей Геннадьевич", color="#fff")
+
+# spaghettinio
+define sp = Character("Спагеттиньо", color="#fff")
+
+# bagio
+define ba = Character("Баггио", color="#fff")
+
+# numbertaurus
+define nu = Character("Цифротаурус", color="#fff")
+
+# aught
+define au = Character("Нечто", color="#fff")
+
+# security
+define se = Character("Охраник", color="#fff")
+
+# vetrorosa
+define ve = Character("Система безопасности мояка \"Ветророза\"", color="#fff")
