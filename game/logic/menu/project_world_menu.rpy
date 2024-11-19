@@ -1,22 +1,16 @@
+$ turn_around_passed = True
 
-define is_proxcity_arc = False
-define is_project_world_vetrorosa = False
-define is_project_world_turn_around = False
+menu project_world_menu:
+    "Где будем искать сначала?"
 
-label project_world_menu:
-    menu:
-        "Где будем искать сначала?"
+    "Пойти в город":
+        return
 
-        "Пойти в город":
-            return
-
-        "Пойти к огньку":
-            call project_world_vetrorosa
-            return
-
-        "Обернуться..." if not is_turn_around_scene:
-            $ is_turn_around_scene = True
-            call project_world_turn_around
-            call project_world_menu
-
-    return
+    "Пойти к огньку":
+        call project_world_vetrorosa
+        return
+    
+    "Обернуться..." if not turn_around_passed:
+        call project_world_turn_around
+        call project_world_menu
+        return

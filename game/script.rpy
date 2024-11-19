@@ -1,4 +1,5 @@
 ﻿label start:
     call welcome
-    call main_story
+    call project_world
+    call proxcity_arc
     return

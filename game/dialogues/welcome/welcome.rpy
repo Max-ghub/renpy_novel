@@ -6,7 +6,7 @@ label welcome:
         "ЧТО ЖЕ ДЕЛАТЬ?"
 
         "Вырваться из рук":
-            call welcome_ending
+            jump welcome_ending
         "Довериться":
             return
             
