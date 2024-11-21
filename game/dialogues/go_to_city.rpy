@@ -1,15 +1,15 @@
 label go_to_city:
-    scene bg_city_path with fade
+    scene city_path with fade
     em "Город кажется логичным направлением. Надеюсь, мы найдём что-то полезное."
 
     ba "Да уж, логика — это не про нас. Ну ладно, пошли."
 
     sp "Я поддерживаю. Город — это центр активности, там обязательно будет подсказка."
 
-    scene bg_city with dissolve
+    scene city with dissolve
     em "Вот он, город! Но где же Радик?"
 
-    scene bg_radik_building with fade
+    scene radik with fade
     em "Кажется, это то самое место... Но у здания нет двери!"
 
     ba "Ну и ну. Как вообще сюда входить?"
