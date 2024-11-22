@@ -19,17 +19,16 @@ label office_intro:
     # Экран начинает мерцать
     play music "computer-flicker.mp3"
     show flash_effect
-    em "Что это за шум? Компьютер... он мигает. Что происходит?!"
+    em "Что это за шум? Всё мерцает! Что происходит?!"
     stop music
 
     # Экран мерцает сильнее
     play music "computer-flicker-grow.mp3" volume 0.1
     show flash_effect_grow
-    em "Нет, только не это! Надеюсь, техника не сломалась. Мне только этого не хватало!"
+    em "Звуки усиливаются, в глазах белеет. Что за..."
     stop music fadeout 1.5
 
     # Вспышка света
     show full_flash_effect with Dissolve(1)
-    em "Что за...?! Всё так ярко!"
 
     return
