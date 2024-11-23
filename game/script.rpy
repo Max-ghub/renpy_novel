@@ -1,20 +1,18 @@
 ﻿label start:
-    call office_intro
+    call intro
 
-    call digital_arrival
-
-    # Появление меню выбора пути
+    call arrival
     menu:
         ba "Выбирай. Мы поддержим тебя на любом маршруте."
 
         "Отправиться в город":
-            call go_to_city
+            call arrival_go_city
             
         "Пойти к огоньку вдалеке":
-            call go_to_light
+            call arrival_go_vetrorosa
         
         "Попытаться выбраться":
-            jump escape_project
+            jump arrival_go_escape
 
     call door_fix_game
 
