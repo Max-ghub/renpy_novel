@@ -5,21 +5,17 @@
 
     # Появление меню выбора пути
     menu:
-        "Обернуться и попытаться выбраться":
-            jump escape_project
-
-        "Пойти к огоньку вдалеке":
-            call go_to_light
+        ba "Выбирай. Мы поддержим тебя на любом маршруте."
 
         "Отправиться в город":
             call go_to_city
+            
+        "Пойти к огоньку вдалеке":
+            call go_to_light
+        
+        "Попытаться выбраться":
+            jump escape_project
 
-    call city_exploration
-
-    call journey_end
-
-    call return_to_reality
-
-    call epilogue
+    call door_fix_game
 
     return
