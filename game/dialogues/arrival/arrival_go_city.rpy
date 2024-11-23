@@ -1,11 +1,15 @@
 label arrival_go_city:
     scene city_path with fade
+    show bagio at dynamic_bagio with moveintop
+    show spaghettinio at dynamic_spag with moveinright
     em "Город кажется логичным направлением. Надеюсь, мы найдём что-то полезное."
     ba "Логика, говоришь? В городе столько всего, что найти что-то конкретное — задача не из лёгких."
     sp "А я поддерживаю. Город — это центр активности. Там точно будет подсказка, и скорее всего, мы найдём ошибку именно там."
     em "Ладно, пойдёмте уже."
 
     scene city with dissolve
+    show bagio at dynamic_bagio with moveintop
+    show spaghettinio at dynamic_spag with moveinright
     sp "Вот он, город! Но где нам искать?"
     em "Да, пришли... а дальше я даже не знаю, с чего начать."
     ba "У меня есть идея. Давайте я взлечу и осмотрюсь сверху. Может, увижу что-нибудь странное."
@@ -20,9 +24,13 @@ label arrival_go_city:
     ba "Ладно-ладно, идём. Покажу."
 
     scene radik with fade
+    show bagio at dynamic_bagio with moveintop
+    show spaghettinio at dynamic_spag with moveinright
     ba "Вот оно. У здания нет двери."
 
     em "Ну и ну... Теперь я вспомнил. Этот участок проекта делал я. Видимо, я полностью забыл добавить дверь."
     sp "Да, очевидно, это проблема. Давай исправим её."
     
+    hide bagio
+    hide spaghettinio
     return

@@ -4,7 +4,7 @@ label arrival:
     em "Аааа... Что? Где я? Что это за место?!"
 
     show bagio at dynamic_bagio with moveintop
-    show spaghettinio at right with moveinright
+    show spaghettinio at dynamic_spag with moveinright
     ba "О, привет, фронтенд-герой! А мы уже думали, что ты сюда никогда не доберёшься. Слишком много времени тебе понадобилось."
     em "Кто вы такие? Что здесь происходит?!"
     ba "Я? Твой личный баг-инспектор, готовый вынести тебе приговор."
