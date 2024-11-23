@@ -1,21 +1,27 @@
 label arrival_go_city:
-    scene city_path with fade
-    show bagio at dynamic_bagio with moveintop
-    show spaghettinio at dynamic_spag with moveinright
+    scene city_path
+    with Fade(0.20, 1, 0.20)
+    show bagio at bagio_dynamic
+    show spaghettinio at dynamic_spag
+    with Dissolve(0.75)
     em "Город кажется логичным направлением. Надеюсь, мы найдём что-то полезное."
     ba "Логика, говоришь? В городе столько всего, что найти что-то конкретное — задача не из лёгких."
     sp "А я поддерживаю. Город — это центр активности. Там точно будет подсказка, и скорее всего, мы найдём ошибку именно там."
     em "Ладно, пойдёмте уже."
 
-    scene city with dissolve
-    show bagio at dynamic_bagio with moveintop
-    show spaghettinio at dynamic_spag with moveinright
+    scene city
+    with Fade(0.20, 1, 0.20)
+    show bagio at bagio_dynamic
+    show spaghettinio at dynamic_spag
+    with Dissolve(0.75)
     sp "Вот он, город! Но где нам искать?"
     em "Да, пришли... а дальше я даже не знаю, с чего начать."
     ba "У меня есть идея. Давайте я взлечу и осмотрюсь сверху. Может, увижу что-нибудь странное."
     em "Хорошая идея! Давай попробуй."
-    # Багио взлетает на поиски
-    # Багио возвращается обратно
+    hide bagio with moveouttop
+    pause 2.5
+    show bagio at bagio_dynamic with moveintop
+    pause 0.5
     em "Ну что, удалось что-то заметить?"
     ba "Осмотрелся. Ничего особо интересного. Спереди длинная дорога, справа дома, слева тоже дома, но..."
     ba "Ха, вот прикол! Там здание стоит, а двери нет. Это же надо было такое придумать."
@@ -23,14 +29,16 @@ label arrival_go_city:
     em "Это может быть той самой проблемой, которую мы ищем. Покажи, где это здание."
     ba "Ладно-ладно, идём. Покажу."
 
-    scene radik with fade
-    show bagio at dynamic_bagio with moveintop
-    show spaghettinio at dynamic_spag with moveinright
+    scene radik
+    with Fade(0.20, 1, 0.20)
+    show bagio at bagio_dynamic
+    show spaghettinio at dynamic_spag
+    with Dissolve(0.75)
     ba "Вот оно. У здания нет двери."
-
     em "Ну и ну... Теперь я вспомнил. Этот участок проекта делал я. Видимо, я полностью забыл добавить дверь."
     sp "Да, очевидно, это проблема. Давай исправим её."
-    
     hide bagio
     hide spaghettinio
+    with Dissolve(0.25)
+
     return

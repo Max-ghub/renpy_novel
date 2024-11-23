@@ -1,10 +1,13 @@
 label arrival:
-    show bg project_forest with Pixellate(1.2, 9)
+    scene bg project_forest with Pixellate(2, 10)
     play music "nature-music.mp3" volume 0.1 fadein 0.75
     em "Аааа... Что? Где я? Что это за место?!"
 
-    show bagio at dynamic_bagio with moveintop
-    show spaghettinio at dynamic_spag with moveinright
+    show bagio at bagio_dynamic_show
+    pause 1
+    show spaghettinio at dynamic_spag
+    with moveinright
+    pause 0.5
     ba "О, привет, фронтенд-герой! А мы уже думали, что ты сюда никогда не доберёшься. Слишком много времени тебе понадобилось."
     em "Кто вы такие? Что здесь происходит?!"
     ba "Я? Твой личный баг-инспектор, готовый вынести тебе приговор."

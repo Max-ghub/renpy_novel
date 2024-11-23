@@ -1,6 +1,6 @@
 label journey_end:
     scene radik with fade
-    show bagio at dynamic_bagio with moveintop
+    show bagio at bagio_dynamic with moveintop
     show spaghettinio at dynamic_spag with moveinright
     em "Фух, наконец-то! Дверь есть, она работает и выглядит как надо."
 
@@ -34,7 +34,7 @@ label journey_end:
     sp "И помни, в любом проекте главное — думать. Всё остальное приложится."
     hide spaghettinio with moveoutright
 
-    scene bg_office with fade
+    scene office with fade
     show emrach
     em "И вот я снова здесь. Всё готово. Проект завершён."
 

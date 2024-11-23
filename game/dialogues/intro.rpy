@@ -1,10 +1,9 @@
 label intro:
-    scene bg_office with fade
-
-    show emrach at center with dissolve
+    scene office with fade
+    show emrach_blink at center with dissolve
     em "Начало рабочего дня. Надеялся, что свежая голова поможет, но нет."
     em "Дедлайн уже сегодня, а во фронтенде ошибка, которую я не могу найти уже три дня."
-
+    
     play sound [ "door-knock.mp3", "door-open.mp3" ]
     pause 1
     show sergey at left with moveinleft
@@ -16,17 +15,17 @@ label intro:
 
     em "Последние детали... Если бы. Ошибка всё ещё там, и я понятия не имею, где искать."
 
-    play music "computer-flicker.mp3"
+    play music "computer-flicker.mp3" fadein 0.5
     show flash_effect
     em "Что за шум? Почему всё вокруг мерцает?!"
-    stop music
 
-    play music "computer-flicker-grow.mp3" volume 0.1
+    play music "computer-flicker.mp3" volume 2
     show flash_effect_grow
     em "Звуки становятся громче, свет всё ярче... Это уже не нормально!"
     em "Голова кружится... Что за чертовщина?!"
     stop music fadeout 1.5
 
-    show full_flash_effect with Dissolve(1)
+    scene full_flash
+    with Fade(1.5, 2, 0, color="#fff")
 
     return
