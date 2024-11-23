@@ -1,4 +1,4 @@
-label digital_arrival:
+label arrival:
     show bg project_forest with Pixellate(1.2, 9)
     play music "nature-music.mp3" volume 0.1 fadein 0.75
     em "Аааа... Что? Где я? Что это за место?!"

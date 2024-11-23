@@ -16,4 +16,6 @@
 
     call door_fix_game
 
+    call journey_end
+
     return

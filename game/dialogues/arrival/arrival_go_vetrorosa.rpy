@@ -1,4 +1,4 @@
-label go_to_light:
+label arrival_go_vetrorosa:
     scene misty_path with fade
     em "Смотрите, там вдалеке огонёк... Он какой-то странно притягательный. Может, это то самое место?"
 

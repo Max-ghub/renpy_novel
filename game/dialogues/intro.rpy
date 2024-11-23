@@ -1,4 +1,4 @@
-label office_intro:
+label intro:
     scene bg_office with fade
 
     show emrach at center with dissolve
