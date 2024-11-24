@@ -2,19 +2,19 @@ transform blink_pause:
     choice:
         4
     choice:
-        renpy.random.randint(1, 10)
+        renpy.random.randint(6, 10)
     choice:
-        renpy.random.randint(1, 10)
+        renpy.random.randint(6, 10)
     choice:
-        renpy.random.randint(1, 15)
+        renpy.random.randint(7, 15)
     choice:
-        renpy.random.randint(1, 15)
+        renpy.random.randint(7, 15)
 
 transform blink(base, blink):
     base
     blink_pause 
     blink
-    pause 0.2
+    pause 0.2   
     repeat
 
 
