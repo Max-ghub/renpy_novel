@@ -5,7 +5,7 @@ label arrival_go_escape:
     stop music fadeout 0.75
 
     scene office
-    show emrach at center 
+    show emrach_blink at center 
     with Pixellate(2, 10)
     em "Уф... Кажется, всё обошлось."
     show sergey at left with moveinleft

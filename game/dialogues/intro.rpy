@@ -6,12 +6,12 @@ label intro:
     
     play sound [ "door-knock.mp3", "door-open.mp3" ]
     pause 1
-    show sergey at left with moveinleft
+    show sergey_blink at left with moveinleft
     sg "Доброе утро, Эмрах. Cдача проекта уже завтра. Как обстоят дела с ним?"
     em "Утро доброе, Сергей Геннадьевич. Ну... Всё идёт по плану. Доделываю последние детали"
     sg "Последние детали? Хорошо. Надеюсь, всё будет готово. Если что, не стесняйся обращаться за помощью."
     play sound "door-open.mp3"
-    hide sergey with moveoutleft
+    hide sergey_blink with moveoutleft
 
     em "Последние детали... Если бы. Ошибка всё ещё там, и я понятия не имею, где искать."
 
