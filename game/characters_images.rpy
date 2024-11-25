@@ -17,7 +17,6 @@ transform blink(base, blink):
     pause 0.2   
     repeat
 
-
 image emrach = blink(
         "/characters/emrach/emrach.png",
         "/characters/emrach/emrach blink.png",
