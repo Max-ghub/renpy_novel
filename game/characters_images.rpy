@@ -1,14 +1,14 @@
 transform blink_pause:
     choice:
-        4
+        3
     choice:
-        renpy.random.randint(6, 10)
+        renpy.random.randint(7, 10)
     choice:
-        renpy.random.randint(6, 10)
+        renpy.random.randint(7, 10)
     choice:
-        renpy.random.randint(7, 15)
+        renpy.random.randint(9, 15)
     choice:
-        renpy.random.randint(7, 15)
+        renpy.random.randint(9, 15)
 
 transform blink(base, blink):
     base
