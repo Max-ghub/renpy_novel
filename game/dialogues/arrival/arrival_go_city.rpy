@@ -30,6 +30,7 @@ label arrival_go_city:
     ba "Ладно-ладно, идём. Покажу."
 
     scene radik
+    play sound "radikSounds.mp3" loop volume 0.1
     with Fade(0.20, 1, 0.20)
     show bagio at bagio_dynamic
     show spaghettinio at dynamic_spag
