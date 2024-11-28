@@ -1,4 +1,4 @@
-image bg bg_office = "bg_office"
+image bg office = "bg_office"
 image bg project_forest = "project_forest"
 image bg city = "city"
 image bg lighthouse = "lighthouse"
