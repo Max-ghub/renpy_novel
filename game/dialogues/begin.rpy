@@ -1,17 +1,17 @@
-label intro:
-    scene office with fade
-    show emrach_blink at center with dissolve
+label begin:
+    scene office with irisout
+    show emrach at center with dissolve
     em "Начало рабочего дня. Надеялся, что свежая голова поможет, но нет."
     em "Дедлайн уже сегодня, а во фронтенде ошибка, которую я не могу найти уже три дня."
     
-    play sound [ "door-knock.mp3", "door-open.mp3" ]
-    pause 1
-    show sergey_blink at left with moveinleft
+    play sound "door_open_closed" volume 0.4
+    pause 2.5
+    show sergey at left with moveinleft
     sg "Доброе утро, Эмрах. Cдача проекта уже завтра. Как обстоят дела с ним?"
     em "Утро доброе, Сергей Геннадьевич. Ну... Всё идёт по плану. Доделываю последние детали."
     sg "Последние детали? Хорошо. Надеюсь, всё будет готово. Если что, не стесняйся обращаться за помощью."
     play sound "door-open.mp3"
-    hide sergey_blink with moveoutleft
+    hide sergey with moveoutleft
 
     em "Последние детали... Если бы. Ошибка всё ещё там, и я понятия не имею, где искать."
 
