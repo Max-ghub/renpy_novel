@@ -12,6 +12,7 @@ label begin:
     sg "Последние детали? Хорошо. Надеюсь, всё будет готово. Если что, не стесняйся обращаться за помощью."
     play sound "door-open.mp3"
     hide sergey with moveoutleft
+    hide sergey with moveoutleft
 
     em "Последние детали... Если бы. Ошибка всё ещё там, и я понятия не имею, где искать."
 
