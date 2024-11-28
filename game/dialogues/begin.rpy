@@ -3,7 +3,7 @@ label begin:
     show emrach at center with dissolve
     em "Начало рабочего дня. Надеялся, что свежая голова поможет, но нет."
     em "Дедлайн уже сегодня, а во фронтенде ошибка, которую я не могу найти уже три дня."
-    
+
     play sound "door_open_closed" volume 0.4
     pause 2.5
     show sergey at left with moveinleft

@@ -1,6 +1,7 @@
 ﻿label start:
     call intro
-
+    call begin
+    
     call arrival
     menu:
         ba "Выбирай. Мы поддержим тебя на любом маршруте."
@@ -15,7 +16,6 @@
             jump arrival_go_escape
 
     call door_fix_game
-
     call journey_end
 
     return
