@@ -1,7 +1,10 @@
 label arrival:
-    scene bg project_forest with Pixellate(2, 10)
-    play music "nature-music.mp3" volume 0.01 fadein 0.75
+    scene bg project_forest with Pixellate(1.5, 8)
+    play sound "forest_sounds.mp3" loop volume 0.075
+    play music "audio/project_world_music.mp3" volume 1 fadein 0.75
     em "Аааа... Что? Где я? Что это за место?!"
+
+    play sound "audio/baggio_back.mp3" volume 0.1
     show bagio at bagio_dynamic_show
     pause 1.5
     show spaghettinio at dynamic_spag

@@ -20,8 +20,10 @@ label arrival_go_city:
     ba "У меня есть идея. Давайте я взлечу и осмотрюсь сверху. Может, увижу что-нибудь странное."
     show bagio with dissolve
     em "Хорошая идея! Давай попробуй."
-    hide bagio with moveouttop
+    play sound "audio/baggio_flying.mp3" volume 0.1
+    hide bagio with moveouttop 
     pause 2.5
+    play sound "audio/baggio_back.mp3" volume 0.1
     show bagio at bagio_dynamic with moveintop
     pause 0.5
     em "Ну что, удалось что-то заметить?"
@@ -35,9 +37,8 @@ label arrival_go_city:
     show bagio offended with dissolve
     ba "Ладно-ладно, идём. Покажу."
 
-    scene radik
-    play sound "radikSounds.mp3" loop volume 0.1
-    with Fade(0.20, 1, 0.20)
+    scene radik with Fade(0.20, 1, 0.20)
+    play sound "audio/radik_sounds.mp3" loop volume 0.1
     show bagio at bagio_dynamic
     show spaghettinio at dynamic_spag
     with Dissolve(0.75)

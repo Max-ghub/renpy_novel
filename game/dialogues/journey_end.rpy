@@ -38,10 +38,13 @@ label journey_end:
     hide spaghettinio with moveoutright
     stop sound fadeout 0.5
 
-    scene office with Pixellate(2, 10)
-    play music "officeMusic.mp3" volume 0.5 fadein 1 fadeout 0.5
+    scene office with Pixellate(1.5, 8)
+    play music "audio/office_music.mp3" volume 0.1 fadein 0.5
     show emrach with dissolve
     em "И вот я снова здесь. Всё готово. Проект завершён."
+
+    play sound "door_knock_open.mp3" volume 0.3
+    pause 2
 
     show sergey happy at left with moveinleft
     sg "Эмрах! Тестировщики прогнали проект перед релизом, всё работает безупречно. Отличная работа! Клиенты будут довольны."
@@ -52,6 +55,9 @@ label journey_end:
 
     sg "И это главное. Хороший разработчик не тот, кто не ошибается, а тот, кто умеет находить проблемы и исправлять их. Продолжай в том же духе."
     hide sergey happy with moveoutleft
+
+    play sound "door_open.mp3" volume 0.3
+    pause 1
 
     show emrach surprised with dissolve
     em "Искал ошибку три дня, исправил за три минуты. Да, программирование часто так работает. Самая простая ошибка может отнять кучу времени."

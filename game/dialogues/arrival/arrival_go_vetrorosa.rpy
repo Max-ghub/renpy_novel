@@ -45,6 +45,7 @@ label arrival_go_vetrorosa:
     sp "Ой, а куда они ушли? Эй, ребята, подождите меня!"
 
     scene radik with fade
+    play sound "audio/radik_sounds.mp3" loop volume 0.1
     show bagio at bagio_dynamic with moveintop
     show spaghettinio at dynamic_spag with moveinright
     ba "Так, мы на месте. И что? Просто какое-то здание. Где тут проблема?"
