@@ -5,14 +5,16 @@ label arrival_go_escape:
     stop music fadeout 0.75
 
     scene office
-    show emrach at center 
+    show emrach scared at center 
     with Pixellate(2, 10)
     em "Уф... Кажется, всё обошлось."
-    show sergey at left with moveinleft
+    show sergey angry at left with moveinleft
     sg "Эмрах, я посмотрел твой проект, там ошибка. Ты вообще ничего не делаешь?! Мы потеряем клиентов из-за тебя!"
+    show emrach sad
     em "Сергей Геннадьевич, я стараюсь... всё вышло из-под контро..."
     sg "Этого недостаточно! Я вынужден прекратить наше сотрудничество. Ты уволен!"
-    hide sergey at left with moveoutleft
+    hide sergey angry at left with moveoutleft
+
     em "Такого я точно не ожидал. Это провал..."
 
     return

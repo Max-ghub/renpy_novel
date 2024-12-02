@@ -21,7 +21,9 @@ label door_fix_game(responder = ba, answer = "Так, что будем испр
     $ dfg_watched_third = False
     $ dfg_watched_fourth = False
     $ dfg_watched_fifth = False
-    
+    hide bagio
+    hide spaghettinio
+    with Dissolve(0.25)
     menu:
         responder "[answer]"
 

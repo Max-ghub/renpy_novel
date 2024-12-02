@@ -3,7 +3,8 @@ label journey_end:
     show bagio at bagio_dynamic with moveintop
     show spaghettinio at dynamic_spag with moveinright
     em "Фух, наконец-то! Дверь есть, она работает и выглядит как надо."
-
+    
+    show bagio happy with dissolve
     ba "Ну что, хорошо поработали."
     sp "И не просто справился. Дверь теперь не только работает, но и выглядит так, как должна. Молодец."
 
@@ -18,7 +19,9 @@ label journey_end:
 
     sp "Зачастую именно так и бывает. Самое сложное — понять, в чём проблема. А исправить её — это уже дело техники."
 
+    show bagio happy with dissolve
     ba "Но главное, ты справился. Багов больше нет, проект завершён. Ты можешь возвращаться."
+    show bagio with dissolve
 
     em "Значит, теперь мы прощаемся?"
 
@@ -40,18 +43,20 @@ label journey_end:
     show emrach with dissolve
     em "И вот я снова здесь. Всё готово. Проект завершён."
 
-    show sergey at left with moveinleft
+    show sergey happy at left with moveinleft
     sg "Эмрах! Тестировщики прогнали проект перед релизом, всё работает безупречно. Отличная работа! Клиенты будут довольны."
 
+    show emrach happy with dissolve
     em "Спасибо, Сергей Геннадьевич. Были сложности, но мы разобрались."
+    show emrach with dissolve
 
     sg "И это главное. Хороший разработчик не тот, кто не ошибается, а тот, кто умеет находить проблемы и исправлять их. Продолжай в том же духе."
+    hide sergey happy with moveoutleft
 
-    hide sergey with moveoutleft
+    show emrach surprised with dissolve
     em "Искал ошибку три дня, исправил за три минуты. Да, программирование часто так работает. Самая простая ошибка может отнять кучу времени."
-
     em "Но это не страшно. Программирование — это не про идеальный код с первого раза. Это про то, как ты справляешься с неидеальным. Главное — всегда доводить до конца."
-
+    show emrach happy with dissolve
     em "Ну что, поехали дальше. Пойду возьму новый таск."
     hide emrach with moveoutleft
 
