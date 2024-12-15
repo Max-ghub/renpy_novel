@@ -1,4 +1,4 @@
-.vscode
+.vscode/*
 game/cache/
 project.json
 *.rpyc*
