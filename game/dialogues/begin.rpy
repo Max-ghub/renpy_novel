@@ -11,7 +11,7 @@ label begin:
 
     show sergey at left with moveinleft
     show emrach with dissolve
-    sg "Доброе утро, Эмрах. Cдача проекта уже завтра. Как обстоят дела с ним?"
+    sg "Доброе утро, Эмрах. Cдача проекта уже завтра. Как там обстоят дела с его выполнением?"
     em "Утро доброе, Сергей Геннадьевич. Ну... Всё идёт по плану. Доделываю последние детали."
 
     show sergey happy with dissolve
@@ -22,7 +22,7 @@ label begin:
     pause 1
 
     show emrach sad with dissolve
-    em "Последние детали... Если бы. Ошибка всё ещё там, и я понятия не имею, где искать."
+    em "Последние детали... Если бы. Проект всё ещё выдаёт ошибку, и я понятия не имею, где её искать."
     stop music fadeout 1.5
 
     $ renpy.sound.play("audio/flickering_sound.mp3", channel='sound', loop=True, fadein=1.0)
@@ -36,8 +36,8 @@ label begin:
     show flash_effect_grow
 
     show emrach scared with dissolve
-    em "Звуки становятся громче, свет всё ярче... Это уже не нормально!"
-    em "Голова кружится... Что за чертовщина?!"
+    em "Звуки становятся громче, свет - ярче... Это уже не нормально!"
+    em "Голова кружится... Что за чертовщина происходит?!"
 
     stop sound fadeout 1.0
     pause 1.0
