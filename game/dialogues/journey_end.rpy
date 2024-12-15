@@ -1,9 +1,10 @@
 label journey_end:
-    scene radik with fade
-    show bagio at bagio_dynamic with moveintop
-    show spaghettinio at dynamic_spag with moveinright
+    scene radik
+    show bagio at bagio_dynamic
+    show spaghettinio at spagetinio_dynamic
+    with Fade(0.5, 0.4, 0.75)
+
     em "Фух, наконец-то! Дверь есть, она работает и выглядит как надо."
-    
     show bagio happy with dissolve
     ba "Ну что, хорошо поработали."
     sp "И не просто справился. Дверь теперь не только работает, но и выглядит так, как должна. Молодец."
@@ -37,6 +38,7 @@ label journey_end:
     sp "И помни, в любом проекте главное — думать. Всё остальное приложится."
     hide spaghettinio with moveoutright
     stop sound fadeout 0.5
+    pause 0.5
 
     scene office with Pixellate(1.5, 8)
     play music "audio/office_music.mp3" volume 0.1 fadein 0.5
@@ -65,5 +67,6 @@ label journey_end:
     show emrach happy with dissolve
     em "Ну что, поехали дальше. Пойду возьму новый таск."
     hide emrach with moveoutleft
-
+    show full_black with irisin
+    pause 2.5
     return

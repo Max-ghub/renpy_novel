@@ -1,24 +1,25 @@
 label door_fix_game_html:
-    "Выберите код для создания двери в HTML. В дальнейшем мы будем стилизовать дверь и делать возможным её открывать."
-    
-    call screen dfg_menu([
-        {
-            "caption": '<div class="door" data-openable="true" data-status="closed"></div>',
-            "action": Return("first")
-        },
-        {
-            "caption": '<div id="door" class="door"></div>',
-            "action": Return("second")
-        },
-        {
-            "caption": '<door data-status="closed"></door>',
-            "action": Return("third")
-        },
-        {
-            "caption": 'div.door(data-openable="true", data-status="closed")',
-            "action": Return("fourth")
-        },
-    ])
+    call screen dfg_menu({
+        "title": "Выберите код для создания двери в HTML. В дальнейшем мы будем стилизовать дверь и делать возможным её открывать.",
+        "menu": [
+            {
+                "caption": '<div class="door" data-openable="true" data-status="closed"></div>',
+                "action": Return("first")
+            },
+            {
+                "caption": '<div id="door" class="door"></div>',
+                "action": Return("second")
+            },
+            {
+                "caption": '<door data-openable="true" data-status="closed"></door>',
+                "action": Return("third")
+            },
+            {
+                "caption": 'div.door(data-openable="true", data-status="closed")',
+                "action": Return("fourth")
+            },
+        ]
+    })
     $ result = _return
     
     if result == "first":
@@ -28,7 +29,6 @@ label door_fix_game_html:
         "{i}id{/i} позволяет задать функциональность, а {i}class{/i} — стиль.
         Но {i}id{/i} можно использовать только для одного элемента, что нехорошо, если мы захотим добавить ещё одну дверь.
         Попробуй выбрать более подходящий вариант."
-        call door_fix_game_html
     elif result == "third":
         "{i}door{/i} — нестандартный тег, его использование некорректно. {i}data-status{/i} показывает состояние двери, но без {i}class{/i} сложно задать стиль,
         а нестандартные теги вызывают проблемы с совместимостью. Выбери что-то другое."
@@ -39,3 +39,4 @@ label door_fix_game_html:
         call door_fix_game_html
 
     return
+    with dissolve

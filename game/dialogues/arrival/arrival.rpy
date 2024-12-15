@@ -6,8 +6,8 @@ label arrival:
 
     play sound "audio/baggio_back.mp3" volume 0.1
     show bagio at bagio_dynamic_show
-    pause 1.5
-    show spaghettinio at dynamic_spag
+    pause 1.0
+    show spaghettinio at spagetinio_dynamic_show
     with moveinright
     pause 0.5
 

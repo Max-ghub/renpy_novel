@@ -1,0 +1,8 @@
+.vscode
+game/cache/
+project.json
+*.rpyc*
+game/saves
+log.txt
+errors.txt
+traceback.txt

@@ -243,19 +243,26 @@ define gui.dfg_button_text_xalign = 0.5
 define gui.dfg_button_text_idle_color = '#b4b4b4'
 define gui.dfg_button_text_hover_color = gui.hover_color
 define gui.dfg_button_text_outlines = [ (absolute(1), "#000", absolute(0), absolute(0)) ]
-screen dfg_menu(choices):
+screen dfg_menu(params):
     style_prefix "dfg"
-    hbox:
-        align (0.5, 0.5)
-        xmaximum 1200
-        ymaximum 320
-        vbox:
-            spacing 8
-            for choice in choices:
-                textbutton choice["caption"] action choice["action"]:
-                    background Frame("gui/textbox.png")
-                    xpadding 25
-                    ypadding 20
+    vbox:
+        align (0.5, 0.05)
+        frame:
+            text params["title"] text_align 0.5
+            background Frame("gui/textbox.png")
+            padding (500, 40, 500, 40)
+            bottom_margin 25
+        hbox:
+            align (0.5, 0.5)
+            xmaximum 1200
+            ymaximum 320
+            vbox:
+                spacing 8
+                for elem in params["menu"]:
+                    textbutton elem["caption"] action elem["action"]:
+                        background Frame("gui/textbox.png")
+                        xpadding 25
+                        ypadding 20
 style dfg_button is default:
     properties gui.button_properties("dfg_button")
 style dfg_button_text is default:
@@ -270,27 +277,34 @@ define gui.dfg_scroll_button_text_size = 22
 define gui.dfg_scroll_button_text_idle_color = '#b4b4b4'
 define gui.dfg_scroll_button_text_hover_color = gui.hover_color
 define gui.dfg_scroll_button_text_outlines = [ (absolute(2), "#000", absolute(0), absolute(0)) ]
-screen dfg_menu_scroll(choices):
+screen dfg_menu_scroll(params):
     style_prefix "dfg_scroll"
-    hbox:
-        align (0.65, 0.5)
-        xsize 900
-        ysize 600
-        spacing 20
-        viewport id "dfg_scroll_viewport":
-            draggable True
-            mousewheel True
-            vbox:
-                spacing 8
-                for choice in choices:
-                    textbutton choice["caption"] action choice["action"]:
-                        background Frame("gui/textbox.png")
-                        xpadding 25
-                        ypadding 20
-        vbar:
-            value YScrollValue("dfg_scroll_viewport")
-            xsize 15
-            ysize 600
+    vbox:
+        align (0.5, 0.05)
+        frame:
+            text params["title"] text_align 0.5
+            background Frame("gui/textbox.png")
+            padding (500, 40, 500, 40)
+            bottom_margin 25
+        hbox:
+            align (0.65, 0.5)
+            xsize 1000
+            ysize 750
+            spacing 20
+            viewport id "dfg_scroll_viewport":
+                draggable True
+                mousewheel True
+                vbox:
+                    spacing 8
+                    for elem in params["menu"]:
+                        textbutton elem["caption"] action elem["action"]:
+                            background Frame("gui/textbox.png")
+                            xpadding 25
+                            ypadding 20
+            vbar:
+                value YScrollValue("dfg_scroll_viewport")
+                xsize 15
+                ysize 750
 style dfg_scroll_button is default:
     properties gui.button_properties("dfg_scroll_button")
     xsize 900
@@ -421,7 +435,7 @@ screen main_menu():
     ## заменять этот.
     tag menu
 
-    add gui.main_menu_background
+    image gui.main_menu_background
 
     ## Эта пустая рамка затеняет главное меню.
     frame:

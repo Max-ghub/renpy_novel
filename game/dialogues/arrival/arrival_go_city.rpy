@@ -1,19 +1,14 @@
 label arrival_go_city:
-    scene city_path
-    with Fade(0.20, 1, 0.20)
-    show bagio at bagio_dynamic
-    show spaghettinio at dynamic_spag
-    with Dissolve(0.75)
     em "Город кажется логичным направлением. Надеюсь, мы найдём что-то полезное."
     ba "Логика, говоришь? В городе столько всего, что найти что-то конкретное — задача не из лёгких."
     sp "А я поддерживаю. Город — это центр активности. Там точно будет подсказка, и скорее всего, мы найдём ошибку именно там."
     em "Ладно, пойдёмте уже."
 
     scene city
-    with Fade(0.20, 1, 0.20)
     show bagio at bagio_dynamic
-    show spaghettinio at dynamic_spag
-    with Dissolve(0.75)
+    show spaghettinio at spagetinio_dynamic
+    with Fade(0.5, 1, 0.75)
+    
     sp "Вот он, город! Но где нам искать?"
     em "Да, пришли... а дальше я даже не знаю, с чего начать."
     show bagio happy with dissolve
@@ -37,13 +32,17 @@ label arrival_go_city:
     show bagio offended with dissolve
     ba "Ладно-ладно, идём. Покажу."
 
-    scene radik with Fade(0.20, 1, 0.20)
+    scene radik
     play sound "audio/radik_sounds.mp3" loop volume 0.1
     show bagio at bagio_dynamic
-    show spaghettinio at dynamic_spag
-    with Dissolve(0.75)
+    show spaghettinio at spagetinio_dynamic
+    with Fade(0.5, 1, 0.75)
+
     ba "Вот оно. У здания нет двери."
     em "Ну и ну... Теперь я вспомнил. Этот участок проекта делал я. Видимо, я полностью забыл добавить дверь."
     sp "Да, очевидно, это проблема. Давай исправим её."
     
+    hide bagio
+    hide spaghettinio
+    with Fade(0.4, 0.3, 0.4)
     return

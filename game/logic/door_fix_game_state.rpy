@@ -22,9 +22,11 @@ init python:
         def is_accessible(self, completed_games):
             return all(game in completed_games for game in self.required_games)
 
-        def get_title(self):
+        def get_title(self, completed_games):
             if self.completed:
                 return f"{{s}}{self.name}{{/s}}"
+            elif not self.completed and self.watched and not self.is_accessible(completed_games):
+                return f"{self.name} (просмотрено)"
             return self.title
 
 init python:

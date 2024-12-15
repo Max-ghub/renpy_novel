@@ -5,10 +5,11 @@ default completed_games = []
 
 default description = "Первым делом нужно создать элемент двери. Выбери с помощью чего мы будет это делать."
 label door_fix_game(description = description):
-    menu:      
+    menu:
+        with Dissolve(0.25)
         "[description]"
         # HTML
-        "[html_state.get_title()]":
+        "[html_state.get_title(completed_games)]":
             if is_show_complated(html_state):
                 call door_fix_game()
                 return
@@ -21,7 +22,7 @@ label door_fix_game(description = description):
             call door_fix_game("Дверь создали, теперь нужно её стилизовать и сделать анимацию для открытия.")
 
         # CSS
-        "[css_state.get_title()]":
+        "[css_state.get_title(completed_games)]":
             if is_show_watched(css_state):
                 call door_fix_game("Начни с HTML, чтобы создать дверь.")
                 return
@@ -41,7 +42,7 @@ label door_fix_game(description = description):
                 call door_fix_game
 
         # JS
-        "[js_state.get_title()]":
+        "[js_state.get_title(completed_games)]":
             if is_show_watched(js_state):
                 call door_fix_game("Сначала создай основу с помощью HTML и придай ей стиль с помощью CSS")
                 return
@@ -56,5 +57,4 @@ label door_fix_game(description = description):
                 "JavaScript нужен, чтобы оживить элементы, добавив им функциональность. Но сначала создай основу с помощью HTML и придай ей стиль с помощью CSS, чтобы было чему добавлять функционал."
                 $ js_state.set_watched()
                 call door_fix_game
-
     return
